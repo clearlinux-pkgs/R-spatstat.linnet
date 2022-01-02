@@ -4,7 +4,7 @@
 #
 Name     : R-spatstat.linnet
 Version  : 2.3.1
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/spatstat.linnet_2.3-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spatstat.linnet_2.3-1.tar.gz
 Summary  : Linear Networks Functionality of the 'spatstat' Family
@@ -51,10 +51,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1639424719
+export SOURCE_DATE_EPOCH=1641129337
 
 %install
-export SOURCE_DATE_EPOCH=1639424719
+export SOURCE_DATE_EPOCH=1641129337
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
