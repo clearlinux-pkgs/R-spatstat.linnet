@@ -4,7 +4,7 @@
 #
 Name     : R-spatstat.linnet
 Version  : 3.0.6
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/spatstat.linnet_3.0-6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spatstat.linnet_3.0-6.tar.gz
 Summary  : Linear Networks Functionality of the 'spatstat' Family
@@ -26,9 +26,6 @@ BuildRequires : R-spatstat.random
 BuildRequires : R-spatstat.sparse
 BuildRequires : R-spatstat.utils
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 and provides functionality for geometrical operations,
@@ -58,10 +55,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1677085342
+export SOURCE_DATE_EPOCH=1678831898
 
 %install
-export SOURCE_DATE_EPOCH=1677085342
+export SOURCE_DATE_EPOCH=1678831898
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
