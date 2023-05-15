@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-spatstat.linnet
-Version  : 3.1.0
-Release  : 19
-URL      : https://cran.r-project.org/src/contrib/spatstat.linnet_3.1-0.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/spatstat.linnet_3.1-0.tar.gz
+Version  : 3.1.1
+Release  : 20
+URL      : https://cran.r-project.org/src/contrib/spatstat.linnet_3.1-1.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/spatstat.linnet_3.1-1.tar.gz
 Summary  : Linear Networks Functionality of the 'spatstat' Family
 Group    : Development/Tools
 License  : GPL-2.0+
@@ -49,16 +49,19 @@ lib components for the R-spatstat.linnet package.
 
 %prep
 %setup -q -n spatstat.linnet
+pushd ..
+cp -a spatstat.linnet buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1681495257
+export SOURCE_DATE_EPOCH=1684176613
 
 %install
-export SOURCE_DATE_EPOCH=1681495257
+export SOURCE_DATE_EPOCH=1684176613
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -96,6 +99,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc . || :
 
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
