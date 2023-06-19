@@ -5,7 +5,7 @@
 #
 Name     : R-spatstat.linnet
 Version  : 3.1.1
-Release  : 20
+Release  : 21
 URL      : https://cran.r-project.org/src/contrib/spatstat.linnet_3.1-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spatstat.linnet_3.1-1.tar.gz
 Summary  : Linear Networks Functionality of the 'spatstat' Family
